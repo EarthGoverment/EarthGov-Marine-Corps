@@ -56,7 +56,6 @@ namespace Content.IntegrationTests.Tests
             "CentComm",
             "Box",
             "Europa",
-            "Barratry",
             "Saltern",
             "Core",
             "Marathon",
@@ -64,7 +63,8 @@ namespace Content.IntegrationTests.Tests
             "MeteorArena",
             "Atlas",
             "Reach",
-            "CMDev"
+            "CMDev",
+            "Savannah"
         };
 
         /// <summary>
