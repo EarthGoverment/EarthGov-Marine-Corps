@@ -1,2 +1,2 @@
-ent-RandomAnomalySpawner = random anomaly spawner
+ent-RandomAnomalySpawner = спавнер случайный аномалия
     .desc = { ent-MarkerBase.desc }

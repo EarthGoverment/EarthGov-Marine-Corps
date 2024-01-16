@@ -1,33 +1,22 @@
-ent-PartHuman = human body part
-
-  .desc = { ent-['BaseItem', 'BasePart'].desc }
-ent-TorsoHuman = human torso
-
-  .desc = { ent-['PartHuman', 'BaseTorso'].desc }
-ent-HeadHuman = human head
-
-  .desc = { ent-['PartHuman', 'BaseHead'].desc }
-ent-LeftArmHuman = left human arm
-
-  .desc = { ent-['PartHuman', 'BaseLeftArm'].desc }
-ent-RightArmHuman = right human arm
-
-  .desc = { ent-['PartHuman', 'BaseRightArm'].desc }
-ent-LeftHandHuman = left human hand
-
-  .desc = { ent-['PartHuman', 'BaseLeftHand'].desc }
-ent-RightHandHuman = right human hand
-
-  .desc = { ent-['PartHuman', 'BaseRightHand'].desc }
-ent-LeftLegHuman = left human leg
-
-  .desc = { ent-['PartHuman', 'BaseLeftLeg'].desc }
-ent-RightLegHuman = right human leg
-
-  .desc = { ent-['PartHuman', 'BaseRightLeg'].desc }
-ent-LeftFootHuman = left human foot
-
-  .desc = { ent-['PartHuman', 'BaseLeftFoot'].desc }
-ent-RightFootHuman = right human foot
-
-  .desc = { ent-['PartHuman', 'BaseRightFoot'].desc }
+ent-PartHuman = часть тела человека
+    .desc = { ent-BaseItem.desc }
+ent-TorsoHuman = туловище человека
+    .desc = { ent-PartHuman.desc }
+ent-HeadHuman = голова человека
+    .desc = { ent-PartHuman.desc }
+ent-LeftArmHuman = левая рука человека
+    .desc = { ent-PartHuman.desc }
+ent-RightArmHuman = правая рука человека
+    .desc = { ent-PartHuman.desc }
+ent-LeftHandHuman = левая кисть человека
+    .desc = { ent-PartHuman.desc }
+ent-RightHandHuman = правая кисть человека
+    .desc = { ent-PartHuman.desc }
+ent-LeftLegHuman = левая нога человека
+    .desc = { ent-PartHuman.desc }
+ent-RightLegHuman = правая нога человека
+    .desc = { ent-PartHuman.desc }
+ent-LeftFootHuman = левая стопа человека
+    .desc = { ent-PartHuman.desc }
+ent-RightFootHuman = правая стопа человека
+    .desc = { ent-PartHuman.desc }

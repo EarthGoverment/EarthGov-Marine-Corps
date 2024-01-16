@@ -1,9 +1,9 @@
-ent-BriefcaseBrownFilled = brown briefcase
-    .suffix = Filled, Paper
+ent-BriefcaseBrownFilled = коричневый чемодан
+    .suffix = Заполненный, Бумага
     .desc = { ent-BriefcaseBrown.desc }
-ent-BriefcaseSyndieSniperBundleFilled = brown briefcase
-    .suffix = SniperBundle
+ent-BriefcaseSyndieSniperBundleFilled = коричневый чемодан
+    .suffix = Заполненный, Христов
     .desc = { ent-BriefcaseSyndie.desc }
-ent-BriefcaseSyndieLobbyingBundleFilled = brown briefcase
-    .suffix = Syndicate, Spesos
+ent-BriefcaseSyndieLobbyingBundleFilled = коричневый чемодан
+    .suffix = Синдикат, Кредиты
     .desc = { ent-BriefcaseSyndie.desc }

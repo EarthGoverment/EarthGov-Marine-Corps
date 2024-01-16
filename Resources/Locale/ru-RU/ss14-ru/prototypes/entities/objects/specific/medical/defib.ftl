@@ -1,11 +1,10 @@
-ent-BaseDefibrillator = defibrillator
-    .desc = CLEAR! Zzzzat!
-ent-Defibrillator = { ent-['BaseDefibrillator', 'PowerCellSlotMediumItem'] }
-
-  .desc = { ent-['BaseDefibrillator', 'PowerCellSlotMediumItem'].desc }
+ent-BaseDefibrillator = дефибриллятор
+    .desc = ЧИСТО! РАЗРЯД!
+ent-Defibrillator = { ent-BaseDefibrillator }
+    .desc = { ent-BaseDefibrillator.desc }
 ent-DefibrillatorEmpty = { ent-Defibrillator }
-    .suffix = Empty
+    .suffix = Пустой
     .desc = { ent-Defibrillator.desc }
 ent-DefibrillatorOneHandedUnpowered = { ent-BaseDefibrillator }
-    .suffix = One-Handed, Unpowered
+    .suffix = Одноручный, Разряженный
     .desc = { ent-BaseDefibrillator.desc }

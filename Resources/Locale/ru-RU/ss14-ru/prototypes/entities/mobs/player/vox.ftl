@@ -1,2 +1,2 @@
-ent-MobVox = Vox
+ent-MobVox = Вокс
     .desc = { ent-BaseMobVox.desc }

@@ -1,10 +1,10 @@
-ent-BaseMagazineShotgun = ammo drum (.50 shells)
+ent-BaseMagazineShotgun = барабан (.50 дробь)
     .desc = { ent-BaseItem.desc }
-ent-MagazineShotgun = ammo drum (.50 pellet)
+ent-MagazineShotgun = барабан (.50 дробь)
     .desc = { ent-BaseMagazineShotgun.desc }
-ent-MagazineShotgunBeanbag = ammo drum (.50 beanbags)
+ent-MagazineShotgunBeanbag = барабан (.50 травматические)
     .desc = { ent-BaseMagazineShotgun.desc }
-ent-MagazineShotgunSlug = ammo drum (.50 slug)
+ent-MagazineShotgunSlug = барабан (.50 картечь)
     .desc = { ent-BaseMagazineShotgun.desc }
-ent-MagazineShotgunIncendiary = ammo drum (.50 incendiary)
+ent-MagazineShotgunIncendiary = барабан (.50 зажигательные)
     .desc = { ent-BaseMagazineShotgun.desc }

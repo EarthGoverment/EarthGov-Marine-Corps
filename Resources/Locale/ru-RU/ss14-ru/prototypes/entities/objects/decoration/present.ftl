@@ -1,27 +1,22 @@
-ent-PresentBase = Present
-    .desc = A little box with incredible surprises inside.
-ent-Present = { ent-['PresentBase', 'BaseStorageItem'] }
-
-  .suffix = Empty
-  .desc = { ent-['PresentBase', 'BaseStorageItem'].desc }
-ent-PresentRandomUnsafe = { ent-['PresentBase', 'BaseItem'] }
-
-  .suffix = Filled Unsafe
-  .desc = { ent-['PresentBase', 'BaseItem'].desc }
-ent-PresentRandomInsane = { ent-PresentRandomUnsafe }
-    .suffix = Filled Insane
-    .desc = { ent-PresentRandomUnsafe.desc }
-ent-PresentRandom = { ent-['PresentBase', 'BaseItem'] }
-
-  .suffix = Filled Safe
-  .desc = { ent-['PresentBase', 'BaseItem'].desc }
-ent-PresentRandomAsh = { ent-['PresentBase', 'BaseItem'] }
-
-  .suffix = Filled Ash
-  .desc = { ent-['PresentBase', 'BaseItem'].desc }
-ent-PresentRandomCash = { ent-['PresentBase', 'BaseItem'] }
-
-  .suffix = Filled Cash
-  .desc = { ent-['PresentBase', 'BaseItem'].desc }
-ent-PresentTrash = Wrapping Paper
-    .desc = Carefully folded, taped, and tied with a bow. Then ceremoniously ripped apart and tossed on the floor.
+ent-PresentBase = подарок
+    .desc = Маленькая коробочка с невероятными сюрпризами внутри.
+ent-Present = { ent-PresentBase }
+    .desc = { ent-PresentBase.desc }
+    .suffix = Пустой
+ent-PresentRandomUnsafe = { ent-PresentBase }
+    .desc = { ent-PresentBase.desc }
+    .suffix = Заполненный, Небезопасный
+ent-PresentRandomInsane = { ent-PresentBase }
+    .desc = { ent-PresentBase.desc }
+    .suffix = Заполненный, Безумный
+ent-PresentRandom = { ent-PresentBase }
+    .desc = { ent-PresentBase.desc }
+    .suffix = Заполненный, Безопасный
+ent-PresentRandomAsh = { ent-PresentBase }
+    .suffix = Заполненный, Пепел
+    .desc = { ent-PresentBase.desc }
+ent-PresentRandomCash = { ent-PresentBase }
+    .suffix = Заполненный, Деньги
+    .desc = { ent-PresentBase.desc }
+ent-PresentTrash = обёрточная бумага
+    .desc = Аккуратно сложенная, заклеенная и завязанная бантиком. Затем торжественно разорванная на части и выброшенная.

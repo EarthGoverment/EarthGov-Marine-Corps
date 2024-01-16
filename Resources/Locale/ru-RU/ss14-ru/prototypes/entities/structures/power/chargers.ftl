@@ -1,13 +1,14 @@
-ent-BaseRecharger = { ent-['BaseMachinePowered', 'ConstructibleMachine'] }
-
-  .desc = { ent-['BaseMachinePowered', 'ConstructibleMachine'].desc }
+ent-BaseRecharger = { ent-BaseMachinePowered }
+    .desc = { ent-BaseMachinePowered.desc }
 ent-BaseItemRecharger = { ent-BaseRecharger }
     .desc = { ent-BaseRecharger.desc }
-ent-PowerCellRecharger = cell recharger
+ent-PowerCellRecharger = зарядник батарей
     .desc = { ent-BaseItemRecharger.desc }
-ent-WeaponCapacitorRecharger = recharger
+ent-WeaponCapacitorRecharger = зарядник энергооружия
     .desc = { ent-BaseItemRecharger.desc }
-ent-WallWeaponCapacitorRecharger = wall recharger
+ent-TurboItemRecharger = турбозарядник
+    .desc = Разогнанное зарядное устройство, оснащённое универсальным портом.
+ent-WallWeaponCapacitorRecharger = настенный зарядник энергооружия
     .desc = { ent-BaseItemRecharger.desc }
-ent-BorgCharger = cyborg recharging station
-    .desc = A stationary charger for various robotic and cyborg entities. Surprisingly spacious.
+ent-BorgCharger = станция зарядки киборгов
+    .desc = Стационарное устройство для зарядки различных роботов и киборгов. Удивительно вместительное.

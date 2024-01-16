@@ -1,2 +1,2 @@
-ent-RadioHandheld = handheld radio
-    .desc = A handy handheld radio.
+ent-RadioHandheld = портативная рация
+    .desc = Удобная портативная рация.

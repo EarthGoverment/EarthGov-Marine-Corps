@@ -1,23 +1,20 @@
 ## Implanter Attempt Messages
 
-implanter-component-implanting-target = { $user } is trying to implant you with something!
-implanter-component-implant-failed = The { $implant } cannot be given to { $target }!
-implanter-draw-failed-permanent = The { $implant } in { $target } is fused with them and cannot be removed!
-implanter-draw-failed = You tried to remove an implant but found nothing.
+implanter-component-implanting-target = { $user } пытается что-то в вас имплантировать!
+implanter-component-implant-failed = { $implant } нельзя имплантировать в { $target }!
+implanter-draw-failed-permanent = { $implant } вросся в { $target } и не может быть удалён!
+implanter-draw-failed = Вы пытаетесь удалить имплант, но ничего не находите.
 
 ## UI
 
-implanter-draw-text = Draw
-implanter-inject-text = Inject
-implanter-empty-text = None
-implanter-label = Implant: [color=green]{ $implantName }[/color] | [color=white]{ $modeString }[/color]{ $lineBreak }{ $implantDescription }
+implanter-draw-text = Извлечение
+implanter-inject-text = Установка
+implanter-empty-text = Пусто
+implanter-label = Имплант: [color=green]{ $implantName }[/color] | [color=white]{ $modeString }[/color]{ $lineBreak }{ $implantDescription }
 implanter-contained-implant-text = [color=green]{ $desc }[/color]
 
-## Implant Popups
+## Implanter Actions
 
-scramble-implant-activated-popup = Your appearance shifts and changes!
-
-## Implant Messages
-
-deathrattle-implant-dead-message = { $user } has died at { $position }.
-deathrattle-implant-critical-message = { $user } life signs critical, immediate assistance required at { $position }.
+scramble-implant-activated-popup = Вы превратились в { $identity }
+deathrattle-implant-dead-message = Зафиксирована смерть { $user } по координатам { $position }.
+deathrattle-implant-critical-message = Жизненные показатели { $user } критические, требуется немедленная помощь по координатам { $position }.
