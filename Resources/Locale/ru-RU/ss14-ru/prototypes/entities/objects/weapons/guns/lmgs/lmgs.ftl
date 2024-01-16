@@ -1,4 +1,7 @@
 ent-BaseWeaponLightMachineGun = BaseWeaponLightMachineGun
-    .desc = A rooty tooty point and shooty.
+    .desc = Дерзай — налетай, целься и стреляй.
 ent-WeaponLightMachineGunL6 = L6 SAW
-    .desc = A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses .30 rifle ammo.
+    .desc = Весьма традиционный легкий пулемет с удобной лакированной деревянной пистолетной рукоятью. Использует патроны калибра .30 винтовочный.
+    .suffix = Пулемёт
+ent-WeaponLightMachineGunL6C = L6C ROW
+    .desc = L6 SAW для киборгов. На ходу создаёт патроны калибра .30 винтовочный из встроенного самозарядного фабрикатора боеприпасов.

@@ -1,10 +1,12 @@
-ent-BaseMagazineBoxPistol = ammunition box (.35 auto)
+ent-BaseMagazineBoxPistol = коробка патронов (.35 авто)
     .desc = { ent-BaseItem.desc }
-ent-MagazineBoxPistol = ammunition box (.35 auto)
+ent-MagazineBoxPistol = коробка патронов (.35 авто)
     .desc = { ent-BaseMagazineBoxPistol.desc }
-ent-MagazineBoxPistolPractice = ammunition box (.35 auto practice)
+ent-MagazineBoxPistolPractice = коробка патронов (.35 авто учебные)
     .desc = { ent-BaseMagazineBoxPistol.desc }
-ent-MagazineBoxPistolRubber = ammunition box (.35 auto rubber)
+ent-MagazineBoxPistolRubber = коробка патронов (.35 авто резиновые)
     .desc = { ent-BaseMagazineBoxPistol.desc }
-ent-MagazineBoxPistolIncendiary = ammunition box (.35 auto incendiary)
+ent-MagazineBoxPistolIncendiary = коробка патронов (.35 авто зажигательные)
+    .desc = { ent-BaseMagazineBoxPistol.desc }
+ent-MagazineBoxPistolUranium = коробка патронов (.35 авто урановые)
     .desc = { ent-BaseMagazineBoxPistol.desc }

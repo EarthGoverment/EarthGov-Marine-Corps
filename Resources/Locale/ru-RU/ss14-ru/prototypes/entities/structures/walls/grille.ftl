@@ -1,6 +1,6 @@
-ent-Grille = grille
-    .desc = A flimsy framework of iron rods.
-ent-GrilleBroken = grille
-    .desc = A flimsy framework of iron rods. It has seen better days.
-ent-GrilleDiagonal = diagonal grille
+ent-Grille = решётка
+    .desc = Хлипкий каркас из железных прутьев.
+ent-GrilleBroken = решётка
+    .desc = Хлипкий каркас из железных прутьев. Он видел и лучшие дни.
+ent-GrilleDiagonal = диагональная решётка
     .desc = { ent-Grille.desc }

@@ -1,2 +1,2 @@
-ent-FTLPoint = FTL point
+ent-FTLPoint = точка БСС
     .desc = { ent-MarkerBase.desc }

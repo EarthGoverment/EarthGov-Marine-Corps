@@ -1,2 +1,2 @@
-ent-CargoPallet = cargo pallet
-    .desc = Designates valid items to sell to CentCom when a shuttle is recalled.
+ent-CargoPallet = грузовой поддон
+    .desc = Определяет предметы для продажи Центкому при отзыве шаттла.

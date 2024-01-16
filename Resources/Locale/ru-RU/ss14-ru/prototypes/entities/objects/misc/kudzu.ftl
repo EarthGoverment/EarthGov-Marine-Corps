@@ -1,7 +1,7 @@
-ent-Kudzu = kudzu
-    .desc = A rapidly growing, dangerous plant. WHY ARE YOU STOPPING TO LOOK AT IT?!
+ent-Kudzu = кудзу
+    .desc = Быстрорастущее, опасное растение. ЗАЧЕМ ВЫ ОСТАНОВИЛИСЬ ПОСМОТРЕТЬ НА НЕГО?!
 ent-WeakKudzu = { ent-Kudzu }
-    .suffix = Weak
     .desc = { ent-Kudzu.desc }
-ent-FleshKudzu = tendons
-    .desc = A rapidly growing cluster of meaty tendons. WHY ARE YOU STOPPING TO LOOK AT IT?!
+    .suffix = Слабый
+ent-FleshKudzu = сухожилия
+    .desc = Быстрорастущее скопление мясистых сухожилий. ЗАЧЕМ ВЫ ОСТАНОВИЛИСЬ ПОСМОТРЕТЬ НА НИХ?!

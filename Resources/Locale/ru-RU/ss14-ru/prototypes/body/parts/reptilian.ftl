@@ -1,33 +1,22 @@
-ent-PartReptilian = reptilian body part
-
-  .desc = { ent-['BaseItem', 'BasePart'].desc }
-ent-TorsoReptilian = reptilian torso
-
-  .desc = { ent-['PartReptilian', 'BaseTorso'].desc }
-ent-HeadReptilian = reptilian head
-
-  .desc = { ent-['PartReptilian', 'BaseHead'].desc }
-ent-LeftArmReptilian = left reptilian arm
-
-  .desc = { ent-['PartReptilian', 'BaseLeftArm'].desc }
-ent-RightArmReptilian = right reptilian arm
-
-  .desc = { ent-['PartReptilian', 'BaseRightArm'].desc }
-ent-LeftHandReptilian = left reptilian hand
-
-  .desc = { ent-['PartReptilian', 'BaseLeftHand'].desc }
-ent-RightHandReptilian = right reptilian hand
-
-  .desc = { ent-['PartReptilian', 'BaseRightHand'].desc }
-ent-LeftLegReptilian = left reptilian leg
-
-  .desc = { ent-['PartReptilian', 'BaseLeftLeg'].desc }
-ent-RightLegReptilian = right reptilian leg
-
-  .desc = { ent-['PartReptilian', 'BaseRightLeg'].desc }
-ent-LeftFootReptilian = left reptilian foot
-
-  .desc = { ent-['PartReptilian', 'BaseLeftFoot'].desc }
-ent-RightFootReptilian = right reptilian foot
-
-  .desc = { ent-['PartReptilian', 'BaseRightFoot'].desc }
+ent-PartReptilian = часть тела унатха
+    .desc = { ent-BaseItem.desc }
+ent-TorsoReptilian = туловище унатха
+    .desc = { ent-PartReptilian.desc }
+ent-HeadReptilian = голова унатха
+    .desc = { ent-PartReptilian.desc }
+ent-LeftArmReptilian = левая рука унатха
+    .desc = { ent-PartReptilian.desc }
+ent-RightArmReptilian = правая рука унатха
+    .desc = { ent-PartReptilian.desc }
+ent-LeftHandReptilian = левая кисть унатха
+    .desc = { ent-PartReptilian.desc }
+ent-RightHandReptilian = правая кисть унатха
+    .desc = { ent-PartReptilian.desc }
+ent-LeftLegReptilian = левая нога унатха
+    .desc = { ent-PartReptilian.desc }
+ent-RightLegReptilian = правая нога унатха
+    .desc = { ent-PartReptilian.desc }
+ent-LeftFootReptilian = левая стопа унатха
+    .desc = { ent-PartReptilian.desc }
+ent-RightFootReptilian = правая стопа унатха
+    .desc = { ent-PartReptilian.desc }

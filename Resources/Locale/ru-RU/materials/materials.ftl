@@ -1,26 +1,35 @@
 # Glass
-materials-glass = glass
-materials-reinforced-glass = reinforced glass
-materials-plasma-glass = plasma glass
-materials-reinforced-plasma-glass = reinforced plasma glass
+materials-glass = стекло
+materials-reinforced-glass = бронестекло
+materials-plasma-glass = плазменное стекло
+materials-reinforced-plasma-glass = плазменное бронестекло
 # Metals
-materials-steel = steel
-materials-gold = gold
-materials-silver = silver
-materials-plasteel = plasteel
+materials-steel = сталь
+materials-gold = золото
+materials-silver = серебро
+materials-plasteel = пласталь
 # Other
-materials-biomass = biomass
-materials-cardboard = cardboard
-materials-cloth = cloth
-materials-durathread = durathread
-materials-plasma = plasma
-materials-plastic = plastic
-materials-wood = wood
-materials-paper = paper
-materials-uranium = uranium
-materials-bananium = bananium
-materials-meat = meat
-materials-web = silk
-materials-bones = bone
+materials-biomass = биомасса
+materials-cardboard = картон
+materials-cloth = ткань
+materials-durathread = дюраткань
+materials-plasma = плазма
+materials-plastic = пластик
+materials-wood = дерево
+materials-paper = бумага
+materials-uranium = уран
+materials-bananium = бананиум
+materials-meat = мясо
+materials-web = шёлк
+materials-bones = кости
+materials-coal = уголь
+# Ores
+materials-raw-iron = руда железа
+materials-raw-quartz = руда кварца
+materials-raw-gold = руда золота
+materials-raw-silver = руда серебра
+materials-raw-plasma = руда плазмы
+materials-raw-uranium = руда урана
+materials-raw-bananium = руда бананиума
 # Material Reclaimer
-material-reclaimer-upgrade-process-rate = process rate
+material-reclaimer-upgrade-process-rate = скорость переработки

@@ -1,4 +1,4 @@
-ent-DiseaseSwab = sterile swab
-    .desc = Used for taking and transfering samples. Sterile until open. Single use only.
-ent-Vaccine = Vaccine
-    .desc = Prevents people who DON'T already have a disease from catching it.
+ent-DiseaseSwab = стерильная палочка
+    .desc = Используется для сбора и перемещения образцов. Стерильны до вскрытия. Одноразовые.
+ent-Vaccine = вакцина
+    .desc = Предотвращает заражение людей, у которых еще нет заболевания.
