@@ -2,8 +2,6 @@ using System.Numerics;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Gravity;
-using Content.Shared.Hands.Components;
-using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Projectiles;
 using Content.Shared.Tag;
@@ -120,11 +118,7 @@ public sealed class ThrowingSystem : EntitySystem
         // Estimate time to arrival so we can apply OnGround status and slow it much faster.
         var time = direction.Length() / strength;
         comp.ThrownTime = _gameTiming.CurTime;
-        // did we launch this with something stronger than our hands?
-        if (TryComp<HandsComponent>(comp.Thrower, out var hands) && strength > hands.ThrowForceMultiplier)
-            comp.LandTime = comp.ThrownTime + TimeSpan.FromSeconds(time);
-        else
-            comp.LandTime = time < FlyTime ? default : comp.ThrownTime + TimeSpan.FromSeconds(time - FlyTime);
+        comp.LandTime = time < FlyTime ? default : comp.ThrownTime + TimeSpan.FromSeconds(time - FlyTime);
         comp.PlayLandSound = playSound;
 
         ThrowingAngleComponent? throwingAngle = null;

@@ -16,7 +16,7 @@
   icon: "JobIconExecutiveOfficer"
   requireAdminNotify: true
   joinNotifyCrew: true
-  supervisors: job-supervisors-cm14-co
+  supervisors: job-supervisors-command
   canBeAntag: false
   accessGroups:
   - MarineMain

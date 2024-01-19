@@ -58,26 +58,22 @@ namespace Content.Server.Disposal.Tube
             SubscribeLocalEvent<DisposalJunctionComponent, GetDisposalsConnectableDirectionsEvent>(OnGetJunctionConnectableDirections);
             SubscribeLocalEvent<DisposalJunctionComponent, GetDisposalsNextDirectionEvent>(OnGetJunctionNextDirection);
 
+            SubscribeLocalEvent<DisposalRouterComponent, ComponentRemove>(OnComponentRemove);
             SubscribeLocalEvent<DisposalRouterComponent, GetDisposalsConnectableDirectionsEvent>(OnGetRouterConnectableDirections);
             SubscribeLocalEvent<DisposalRouterComponent, GetDisposalsNextDirectionEvent>(OnGetRouterNextDirection);
 
             SubscribeLocalEvent<DisposalTransitComponent, GetDisposalsConnectableDirectionsEvent>(OnGetTransitConnectableDirections);
             SubscribeLocalEvent<DisposalTransitComponent, GetDisposalsNextDirectionEvent>(OnGetTransitNextDirection);
 
+            SubscribeLocalEvent<DisposalTaggerComponent, ComponentRemove>(OnComponentRemove);
             SubscribeLocalEvent<DisposalTaggerComponent, GetDisposalsConnectableDirectionsEvent>(OnGetTaggerConnectableDirections);
             SubscribeLocalEvent<DisposalTaggerComponent, GetDisposalsNextDirectionEvent>(OnGetTaggerNextDirection);
 
-            Subs.BuiEvents<DisposalRouterComponent>(DisposalRouterUiKey.Key, subs =>
-            {
-                subs.Event<BoundUIOpenedEvent>(OnOpenRouterUI);
-                subs.Event<SharedDisposalRouterComponent.UiActionMessage>(OnUiAction);
-            });
+            SubscribeLocalEvent<DisposalRouterComponent, ActivatableUIOpenAttemptEvent>(OnOpenRouterUIAttempt);
+            SubscribeLocalEvent<DisposalTaggerComponent, ActivatableUIOpenAttemptEvent>(OnOpenTaggerUIAttempt);
 
-            Subs.BuiEvents<DisposalTaggerComponent>(DisposalTaggerUiKey.Key, subs =>
-            {
-                subs.Event<BoundUIOpenedEvent>(OnOpenTaggerUI);
-                subs.Event<SharedDisposalTaggerComponent.UiActionMessage>(OnUiAction);
-            });
+            SubscribeLocalEvent<DisposalRouterComponent, SharedDisposalRouterComponent.UiActionMessage>(OnUiAction);
+            SubscribeLocalEvent<DisposalTaggerComponent, SharedDisposalTaggerComponent.UiActionMessage>(OnUiAction);
         }
 
 
@@ -88,13 +84,15 @@ namespace Content.Server.Disposal.Tube
         /// <param name="msg">A user interface message from the client.</param>
         private void OnUiAction(EntityUid uid, DisposalTaggerComponent tagger, SharedDisposalTaggerComponent.UiActionMessage msg)
         {
+            if (!DisposalTaggerUiKey.Key.Equals(msg.UiKey))
+                return;
             if (TryComp<PhysicsComponent>(uid, out var physBody) && physBody.BodyType != BodyType.Static)
                 return;
 
             //Check for correct message and ignore maleformed strings
             if (msg.Action == SharedDisposalTaggerComponent.UiAction.Ok && SharedDisposalTaggerComponent.TagRegex.IsMatch(msg.Tag))
             {
-                tagger.Tag = msg.Tag.Trim();
+                tagger.Tag = msg.Tag;
                 _audioSystem.PlayPvs(tagger.ClickSound, uid, AudioParams.Default.WithVolume(-2f));
             }
         }
@@ -107,6 +105,8 @@ namespace Content.Server.Disposal.Tube
         /// <param name="msg">A user interface message from the client.</param>
         private void OnUiAction(EntityUid uid, DisposalRouterComponent router, SharedDisposalRouterComponent.UiActionMessage msg)
         {
+            if (!DisposalRouterUiKey.Key.Equals(msg.UiKey))
+                return;
             if (!EntityManager.EntityExists(msg.Session.AttachedEntity))
                 return;
             if (TryComp<PhysicsComponent>(uid, out var physBody) && physBody.BodyType != BodyType.Static)
@@ -118,14 +118,9 @@ namespace Content.Server.Disposal.Tube
                 router.Tags.Clear();
                 foreach (var tag in msg.Tags.Split(',', StringSplitOptions.RemoveEmptyEntries))
                 {
-                    var trimmed = tag.Trim();
-                    if (trimmed == "")
-                        continue;
-
                     router.Tags.Add(tag.Trim());
+                    _audioSystem.PlayPvs(router.ClickSound, uid, AudioParams.Default.WithVolume(-2f));
                 }
-
-                _audioSystem.PlayPvs(router.ClickSound, uid, AudioParams.Default.WithVolume(-2f));
             }
         }
 
@@ -137,6 +132,16 @@ namespace Content.Server.Disposal.Tube
         private void OnComponentRemove(EntityUid uid, DisposalTubeComponent tube, ComponentRemove args)
         {
             DisconnectTube(uid, tube);
+        }
+
+        private void OnComponentRemove(EntityUid uid, DisposalTaggerComponent tagger, ComponentRemove args)
+        {
+            _uiSystem.TryCloseAll(uid, DisposalTaggerUiKey.Key);
+        }
+
+        private void OnComponentRemove(EntityUid uid, DisposalRouterComponent tagger, ComponentRemove args)
+        {
+            _uiSystem.TryCloseAll(uid, DisposalRouterUiKey.Key);
         }
 
         private void OnGetBendConnectableDirections(EntityUid uid, DisposalBendComponent component, ref GetDisposalsConnectableDirectionsEvent args)
@@ -278,18 +283,40 @@ namespace Content.Server.Disposal.Tube
             DisconnectTube(uid, component);
         }
 
-        private void OnOpenRouterUI(EntityUid uid, DisposalRouterComponent router, BoundUIOpenedEvent args)
+        private void OnOpenRouterUIAttempt(EntityUid uid, DisposalRouterComponent router, ActivatableUIOpenAttemptEvent args)
         {
+            if (!TryComp<HandsComponent>(args.User, out var hands))
+            {
+                _popups.PopupClient(Loc.GetString("disposal-router-window-tag-input-activate-no-hands"), uid, args.User);
+                return;
+            }
+
+            var activeHandEntity = hands.ActiveHandEntity;
+            if (activeHandEntity != null)
+            {
+                args.Cancel();
+            }
+
             UpdateRouterUserInterface(uid, router);
         }
 
-        private void OnOpenTaggerUI(EntityUid uid, DisposalTaggerComponent tagger, BoundUIOpenedEvent args)
+        private void OnOpenTaggerUIAttempt(EntityUid uid, DisposalTaggerComponent tagger, ActivatableUIOpenAttemptEvent args)
         {
-            if (_uiSystem.TryGetUi(uid, DisposalTaggerUiKey.Key, out var bui))
+            if (!TryComp<HandsComponent>(args.User, out var hands))
             {
+                _popups.PopupClient(Loc.GetString("disposal-tagger-window-activate-no-hands"), uid, args.User);
+                return;
+            }
+
+            var activeHandEntity = hands.ActiveHandEntity;
+            if (activeHandEntity != null)
+            {
+                args.Cancel();
+            }
+
+            if (_uiSystem.TryGetUi(uid, DisposalTaggerUiKey.Key, out var bui))
                 _uiSystem.SetUiState(bui,
                     new DisposalTaggerUserInterfaceState(tagger.Tag));
-            }
         }
 
         /// <summary>
@@ -298,13 +325,11 @@ namespace Content.Server.Disposal.Tube
         /// <returns>Returns a <see cref="SharedDisposalRouterComponent.DisposalRouterUserInterfaceState"/></returns>
         private void UpdateRouterUserInterface(EntityUid uid, DisposalRouterComponent router)
         {
-            var bui = _uiSystem.GetUiOrNull(uid, DisposalRouterUiKey.Key);
-            if (bui == null)
-                return;
-
+            var bui = _uiSystem.GetUiOrNull(uid, DisposalTaggerUiKey.Key);
             if (router.Tags.Count <= 0)
             {
-                _uiSystem.SetUiState(bui, new DisposalRouterUserInterfaceState(""));
+                if (bui is not null)
+                    _uiSystem.SetUiState(bui, new DisposalTaggerUserInterfaceState(""));
                 return;
             }
 
@@ -318,7 +343,8 @@ namespace Content.Server.Disposal.Tube
 
             taglist.Remove(taglist.Length - 2, 2);
 
-            _uiSystem.SetUiState(bui, new DisposalRouterUserInterfaceState(taglist.ToString()));
+            if (bui is not null)
+                _uiSystem.SetUiState(bui, new DisposalTaggerUserInterfaceState(taglist.ToString()));
         }
 
         private void OnAnchorChange(EntityUid uid, DisposalTubeComponent component, ref AnchorStateChangedEvent args)

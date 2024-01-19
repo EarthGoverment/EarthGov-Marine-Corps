@@ -27,9 +27,7 @@ public sealed partial class ShuttleConsoleSystem
 
     private void OnDronePilotConsoleClose(EntityUid uid, DroneConsoleComponent component, BoundUIClosedEvent args)
     {
-        // Only if last person closed UI.
-        if (!_ui.IsUiOpen(uid, args.UiKey))
-            component.Entity = null;
+        component.Entity = null;
     }
 
     private void OnCargoGetConsole(EntityUid uid, DroneConsoleComponent component, ref ConsoleShuttleEvent args)

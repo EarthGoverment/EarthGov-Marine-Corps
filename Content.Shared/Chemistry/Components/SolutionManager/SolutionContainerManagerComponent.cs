@@ -31,6 +31,6 @@ public sealed partial class SolutionContainerManagerComponent : Component
     /// <remarks>
     /// Should be null after mapinit.
     /// </remarks>
-    [DataField, AutoNetworkedField]
+    [DataField(serverOnly: true)] // Needs to be serverOnly or these will get loaded on the client and never cleared. Can be reworked when entity spawning is predicted.
     public Dictionary<string, Solution>? Solutions = null;
 }

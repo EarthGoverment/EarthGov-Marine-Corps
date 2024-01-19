@@ -61,7 +61,6 @@
       - id: ClothingUniformJumpsuitHoSAlt
       - id: ClothingUniformJumpskirtHosFormal
       - id: ClothingUniformJumpsuitHosFormal
-      - id: ClothingMaskNeckGaiter
 
 - type: entity
   id: DresserQuarterMasterFilled

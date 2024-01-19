@@ -5,7 +5,6 @@ using Content.Shared.Administration;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Hands.Components;
-using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Verbs;
 
 namespace Content.Server.Verbs
@@ -97,7 +96,7 @@ namespace Content.Server.Verbs
             }
 
             // if this is a virtual pull, get the held entity
-            if (holding != null && TryComp(holding, out VirtualItemComponent? pull))
+            if (holding != null && TryComp(holding, out HandVirtualItemComponent? pull))
                 holding = pull.BlockingEntity;
 
             var verbText = $"{verb.Category?.Text} {verb.Text}".Trim();

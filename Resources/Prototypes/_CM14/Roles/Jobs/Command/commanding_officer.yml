@@ -25,7 +25,7 @@
   icon: "JobIconCommandingOfficer"
   requireAdminNotify: true
   joinNotifyCrew: true
-  supervisors: job-supervisors-cm14-uscm
+  supervisors: job-supervisors-highcommand
   canBeAntag: false
   accessGroups:
   - ShipMasterAccess

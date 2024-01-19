@@ -31,18 +31,14 @@ public sealed class AccessOverriderSystem : SharedAccessOverriderSystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<AccessOverriderComponent, WriteToTargetAccessReaderIdMessage>(OnWriteToTargetAccessReaderIdMessage);
         SubscribeLocalEvent<AccessOverriderComponent, ComponentStartup>(UpdateUserInterface);
         SubscribeLocalEvent<AccessOverriderComponent, EntInsertedIntoContainerMessage>(UpdateUserInterface);
         SubscribeLocalEvent<AccessOverriderComponent, EntRemovedFromContainerMessage>(UpdateUserInterface);
         SubscribeLocalEvent<AccessOverriderComponent, AfterInteractEvent>(AfterInteractOn);
         SubscribeLocalEvent<AccessOverriderComponent, AccessOverriderDoAfterEvent>(OnDoAfter);
-
-        Subs.BuiEvents<AccessOverriderComponent>(AccessOverriderUiKey.Key, subs =>
-        {
-            subs.Event<BoundUIOpenedEvent>(UpdateUserInterface);
-            subs.Event<BoundUIClosedEvent>(OnClose);
-            subs.Event<WriteToTargetAccessReaderIdMessage>(OnWriteToTargetAccessReaderIdMessage);
-        });
+        SubscribeLocalEvent<AccessOverriderComponent, BoundUIOpenedEvent>(UpdateUserInterface);
+        SubscribeLocalEvent<AccessOverriderComponent, BoundUIClosedEvent>(OnClose);
     }
 
     private void AfterInteractOn(EntityUid uid, AccessOverriderComponent component, AfterInteractEvent args)

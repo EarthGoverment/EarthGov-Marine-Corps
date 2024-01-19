@@ -10,8 +10,7 @@
       time: 18000 #5 hrs
   startingGear: WeaponsSpecialistGear
   icon: "JobIconWeaponsSpecialist"
-  joinNotifyCrew: false
-  supervisors: job-supervisors-cm14-sl
+  supervisors: job-supervisors-squad-leader
   canBeAntag: false
   accessGroups:
   - WeaponSpec

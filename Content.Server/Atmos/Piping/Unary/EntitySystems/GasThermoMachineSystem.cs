@@ -15,8 +15,6 @@ using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Content.Server.Power.EntitySystems;
 using Content.Server.UserInterface;
-using Content.Shared.Administration.Logs;
-using Content.Shared.Database;
 using Content.Shared.Examine;
 
 namespace Content.Server.Atmos.Piping.Unary.EntitySystems
@@ -29,7 +27,6 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
         [Dependency] private readonly PowerReceiverSystem _power = default!;
         [Dependency] private readonly NodeContainerSystem _nodeContainer = default!;
         [Dependency] private readonly DeviceNetworkSystem _deviceNetwork = default!;
-        [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
 
         public override void Initialize()
         {
@@ -113,8 +110,7 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
 
         private void OnToggleMessage(EntityUid uid, GasThermoMachineComponent thermoMachine, GasThermomachineToggleMessage args)
         {
-            var powerState = _power.TogglePower(uid);
-            _adminLogger.Add(LogType.AtmosPowerChanged, $"{ToPrettyString(args.Session.AttachedEntity)} turned {(powerState ? "On" : "Off")} {ToPrettyString(uid)}");
+            _power.TogglePower(uid);
             DirtyUI(uid, thermoMachine);
         }
 
@@ -125,7 +121,6 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
             else
                 thermoMachine.TargetTemperature = MathF.Max(args.Temperature, thermoMachine.MinTemperature);
             thermoMachine.TargetTemperature = MathF.Max(thermoMachine.TargetTemperature, Atmospherics.TCMB);
-            _adminLogger.Add(LogType.AtmosTemperatureChanged, $"{ToPrettyString(args.Session.AttachedEntity)} set temperature on {ToPrettyString(uid)} to {thermoMachine.TargetTemperature}");
             DirtyUI(uid, thermoMachine);
         }
 

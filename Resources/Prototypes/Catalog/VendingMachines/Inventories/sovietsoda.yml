@@ -2,5 +2,5 @@
   id: BodaInventory
   startingInventory:
     DrinkSodaWaterCan: 10 #typically hacked product. Default product is "soda"
-  contrabandInventory:
+  emaggedInventory:
     DrinkColaCan: 10

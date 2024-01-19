@@ -94,5 +94,4 @@ public enum LogType
     /// A client has sent too many chat messages recently and is temporarily blocked from sending more.
     /// </summary>
     ChatRateLimited = 87,
-    AtmosTemperatureChanged = 88,
 }

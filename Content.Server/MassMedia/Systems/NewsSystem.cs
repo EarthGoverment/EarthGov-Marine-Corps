@@ -36,7 +36,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.MassMedia.Systems;
 
-public sealed class NewsSystem : SharedNewsSystem
+public sealed class NewsSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
@@ -50,7 +50,6 @@ public sealed class NewsSystem : SharedNewsSystem
     [Dependency] private readonly StationRecordsSystem _stationRecords = default!;
 
     // TODO remove this. Dont store data on systems
-    // Honestly NewsSystem just needs someone to rewrite it entirely.
     private readonly List<NewsArticle> _articles = new List<NewsArticle>();
 
     public override void Initialize()
@@ -69,7 +68,7 @@ public sealed class NewsSystem : SharedNewsSystem
 
     private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
-        _articles.Clear();
+        _articles?.Clear();
     }
 
     public void ToggleUi(EntityUid user, EntityUid deviceEnt, NewsWriteComponent? component)
@@ -134,12 +133,10 @@ public sealed class NewsSystem : SharedNewsSystem
         if (!_accessReader.FindAccessItemsInventory(author, out var items))
             return;
 
-        if (!_accessReader.FindStationRecordKeys(author, out _, items))
+        if (!_accessReader.FindStationRecordKeys(author, out var stationRecordKeys, items))
             return;
 
         string? authorName = null;
-
-        // TODO: There is a dedicated helper for this.
         foreach (var item in items)
         {
             // ID Card
@@ -158,15 +155,13 @@ public sealed class NewsSystem : SharedNewsSystem
             }
         }
 
-        var trimmedName = msg.Name.Trim();
-        var trimmedContent = msg.Content.Trim();
-
-        var article = new NewsArticle
+        NewsArticle article = new NewsArticle
         {
             Author = authorName,
-            Name = trimmedName.Length <= MaxNameLength ? trimmedName : $"{trimmedName[..MaxNameLength]}...",
-            Content = trimmedContent.Length <= MaxArticleLength ? trimmedContent : $"{trimmedContent[..MaxArticleLength]}...",
+            Name = (msg.Name.Length <= 25 ? msg.Name.Trim() : $"{msg.Name.Trim().Substring(0, 25)}..."),
+            Content = msg.Content,
             ShareTime = _ticker.RoundDuration()
+
         };
 
         _audio.PlayPvs(component.ConfirmSound, uid);

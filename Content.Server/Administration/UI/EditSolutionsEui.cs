@@ -5,7 +5,6 @@ using Content.Shared.Administration;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Eui;
 using JetBrains.Annotations;
-using Robust.Shared.Timing;
 
 namespace Content.Server.Administration.UI
 {
@@ -16,7 +15,6 @@ namespace Content.Server.Administration.UI
     public sealed class EditSolutionsEui : BaseEui
     {
         [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IGameTiming _gameTiming = default!;
         private readonly SolutionContainerSystem _solutionContainerSystem = default!;
         public readonly EntityUid Target;
 
@@ -57,7 +55,7 @@ namespace Content.Server.Administration.UI
             else
                 netSolutions = null;
 
-            return new EditSolutionsEuiState(_entityManager.GetNetEntity(Target), netSolutions, _gameTiming.CurTick);
+            return new EditSolutionsEuiState(_entityManager.GetNetEntity(Target), netSolutions);
         }
     }
 }

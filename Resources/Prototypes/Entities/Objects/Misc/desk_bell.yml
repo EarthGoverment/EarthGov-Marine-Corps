@@ -14,7 +14,6 @@
     params:
       variation: 0.03
       volume: 3
-    onActivate: true
   - type: EmitSoundOnUse
     sound:
       collection: DeskBell

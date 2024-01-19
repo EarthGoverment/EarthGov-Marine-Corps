@@ -268,9 +268,9 @@
   description: High-quality combat gloves to protect hands from mechanical damage during combat.
   components:
   - type: Sprite
-    sprite: Clothing/Hands/Gloves/mercbattle.rsi
+    sprite: Clothing/Hands/Gloves/Color/olive.rsi
   - type: Clothing
-    sprite: Clothing/Hands/Gloves/mercbattle.rsi
+    sprite: Clothing/Hands/Gloves/Color/olive.rsi
   - type: Butcherable
     butcheringType: Knife
     spawned:

@@ -19,7 +19,7 @@ namespace Content.Server.Atmos.Reactions
             var initialTrit = mixture.GetMoles(Gas.Tritium);
 
             if (mixture.GetMoles(Gas.Oxygen) < initialTrit ||
-                Atmospherics.MinimumTritiumOxyburnEnergy > (temperature * oldHeatCapacity * heatScale))
+                Atmospherics.MinimumTritiumOxyburnEnergy > (temperature * oldHeatCapacity))
             {
                 burnedFuel = mixture.GetMoles(Gas.Oxygen) / Atmospherics.TritiumBurnOxyFactor;
                 if (burnedFuel > initialTrit)

@@ -9,14 +9,15 @@
     sprite: _CM14/Objects/Medical/health_analyzer.rsi
     state: health
   - type: ActivatableUI
-    key: enum.HealthScannerUIKey.Key
+    key: enum.HealthAnalyzerUiKey.Key
     closeOnHandDeselect: false
   - type: UserInterface
     interfaces:
-    - key: enum.HealthScannerUIKey.Key
-      type: HealthScannerBoundUserInterface
-  - type: HealthScanner
-    sound:
+    - key: enum.HealthAnalyzerUiKey.Key
+      type: HealthAnalyzerBoundUserInterface
+  - type: HealthAnalyzer
+    scanDelay: 0
+    scanningEndSound:
       path: "/Audio/_CM14/Medical/healthanalyzer.ogg"
   - type: Appearance
   - type: GuideHelp

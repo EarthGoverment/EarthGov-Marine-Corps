@@ -44,10 +44,10 @@
     soundHit:
       path: /Audio/Weapons/pierce.ogg
     angle: 30
-    animation: WeaponArcClaw
+    animation: WeaponArcPunch
     damage:
       types:
-        Slash: 5
+        Piercing: 5
   - type: Temperature
     heatDamageThreshold: 400
     coldDamageThreshold: 285
@@ -59,7 +59,6 @@
     heatDamage:
       types:
         Heat : 1.5 #per second, scales with temperature & other constants
-  - type: Wagging
 
 - type: entity
   parent: BaseSpeciesDummy

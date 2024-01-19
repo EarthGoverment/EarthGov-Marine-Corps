@@ -10,8 +10,9 @@
     time: 21600 # 6 hours
   startingGear: PilotOfficerGear
   icon: "JobIconPilotOfficer"
-  joinNotifyCrew: false
-  supervisors: job-supervisors-cm14-aso
+  requireAdminNotify: false
+  joinNotifyCrew: true
+  supervisors: job-supervisors-command
   canBeAntag: false
   accessGroups:
   - PilotOfficer

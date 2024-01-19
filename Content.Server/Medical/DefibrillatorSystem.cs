@@ -1,4 +1,4 @@
-using Content.Server.Atmos.Rotting;
+﻿using Content.Server.Atmos.Rotting;
 using Content.Server.Chat.Systems;
 using Content.Server.DoAfter;
 using Content.Server.Electrocution;
@@ -201,7 +201,7 @@ public sealed class DefibrillatorSystem : EntitySystem
         // clowns zap themselves
         if (HasComp<ClumsyComponent>(user) && user != target)
         {
-            Zap(uid, user, user, component);
+            Zap(uid, user, user, component, mob, thresholds);
             return;
         }
 

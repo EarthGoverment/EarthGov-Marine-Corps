@@ -10,10 +10,7 @@ public sealed partial class SensorMonitoringConsoleSystem
 {
     private void InitUI()
     {
-        Subs.BuiEvents<SensorMonitoringConsoleComponent>(SensorMonitoringConsoleUiKey.Key, subs =>
-        {
-            subs.Event<BoundUIClosedEvent>(ConsoleUIClosed);
-        });
+        SubscribeLocalEvent<SensorMonitoringConsoleComponent, BoundUIClosedEvent>(ConsoleUIClosed);
     }
 
     private void UpdateConsoleUI(EntityUid uid, SensorMonitoringConsoleComponent comp)

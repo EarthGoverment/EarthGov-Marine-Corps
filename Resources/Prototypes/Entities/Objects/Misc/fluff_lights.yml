@@ -206,7 +206,9 @@
           bounds: "-0.2, -0.5, 0.2, 0.5"
         density: 50
         mask:
-        - HighImpassable
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: PointLight
     enabled: false
     radius: 8
@@ -276,4 +278,6 @@
           bounds: "-0.2, -0.5, 0.2, 0.5"
         density: 50
         mask:
-        - HighImpassable
+        - MachineMask
+        layer:
+        - MachineLayer

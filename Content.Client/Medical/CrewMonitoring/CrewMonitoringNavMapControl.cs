@@ -9,6 +9,7 @@ public sealed partial class CrewMonitoringNavMapControl : NavMapControl
     public NetEntity? Focus;
     public Dictionary<NetEntity, string> LocalizedNames = new();
 
+    private Color _backgroundColor;
     private Label _trackedEntityLabel;
     private PanelContainer _trackedEntityPanel;
 
@@ -16,7 +17,8 @@ public sealed partial class CrewMonitoringNavMapControl : NavMapControl
     {
         WallColor = new Color(192, 122, 196);
         TileColor = new(71, 42, 72);
-        _backgroundColor = Color.FromSrgb(TileColor.WithAlpha(_backgroundOpacity));
+
+        _backgroundColor = Color.FromSrgb(TileColor.WithAlpha(0.8f));
 
         _trackedEntityLabel = new Label
         {

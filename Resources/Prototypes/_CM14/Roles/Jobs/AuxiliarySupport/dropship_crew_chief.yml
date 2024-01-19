@@ -6,8 +6,9 @@
   playTimeTracker: JobDropshipCrewChief
   startingGear: DCCGear
   icon: "JobIconDCC"
-  joinNotifyCrew: false
-  supervisors: job-supervisors-cm14-po
+  requireAdminNotify: false
+  joinNotifyCrew: true
+  supervisors: job-supervisors-command
   canBeAntag: true
   accessGroups:
   - DropshipCrewChief

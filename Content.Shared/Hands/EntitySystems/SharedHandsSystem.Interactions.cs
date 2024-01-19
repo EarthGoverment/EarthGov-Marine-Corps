@@ -3,7 +3,6 @@ using Content.Shared.Examine;
 using Content.Shared.Hands.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Input;
-using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Localizations;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Map;
@@ -184,7 +183,7 @@ public abstract partial class SharedHandsSystem : EntitySystem
     private void HandleExamined(EntityUid uid, HandsComponent handsComp, ExaminedEvent args)
     {
         var held = EnumerateHeld(uid, handsComp)
-            .Where(x => !HasComp<VirtualItemComponent>(x)).ToList();
+            .Where(x => !HasComp<HandVirtualItemComponent>(x)).ToList();
 
         using (args.PushGroup(nameof(HandsComponent)))
         {

@@ -26,7 +26,7 @@ public sealed partial class SerializationTest
 
         var node = seriMan.WriteValue(value, notNullableOverride:true);
         var valueNode = node as ValueDataNode;
-        Assert.That(valueNode, Is.Not.Null);
+        Assert.NotNull(valueNode);
 
         var expected = refMan.GetEnumReference(value);
         Assert.That(valueNode!.Value, Is.EqualTo(expected));

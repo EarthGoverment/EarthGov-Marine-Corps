@@ -60,7 +60,7 @@ public sealed class GhostRoleTests
         Assert.That(session.AttachedEntity, Is.EqualTo(originalMob));
         var originalMind = entMan.GetComponent<MindComponent>(originalMindId);
         Assert.That(originalMind.OwnedEntity, Is.EqualTo(originalMob));
-        Assert.That(originalMind.VisitingEntity, Is.Null);
+        Assert.Null(originalMind.VisitingEntity);
 
         // Use the ghost command
         conHost.ExecuteCommand("ghost");
@@ -90,11 +90,11 @@ public sealed class GhostRoleTests
         Assert.That(newMindId, Is.Not.EqualTo(originalMindId));
         Assert.That(session.AttachedEntity, Is.EqualTo(ghostRole));
         Assert.That(newMind.OwnedEntity, Is.EqualTo(ghostRole));
-        Assert.That(newMind.VisitingEntity, Is.Null);
+        Assert.Null(newMind.VisitingEntity);
 
         // Original mind should be unaffected, but the ghost will have deleted itself.
         Assert.That(originalMind.OwnedEntity, Is.EqualTo(originalMob));
-        Assert.That(originalMind.VisitingEntity, Is.Null);
+        Assert.Null(originalMind.VisitingEntity);
         Assert.That(entMan.Deleted(ghost));
 
         // Ghost again.
@@ -113,11 +113,11 @@ public sealed class GhostRoleTests
         await pair.RunTicksSync(10);
         Assert.That(session.AttachedEntity, Is.EqualTo(originalMob));
         Assert.That(originalMind.OwnedEntity, Is.EqualTo(originalMob));
-        Assert.That(originalMind.VisitingEntity, Is.Null);
+        Assert.Null(originalMind.VisitingEntity);
 
         // the ghost-role mind is unaffected, though the ghost will have deleted itself
         Assert.That(newMind.OwnedEntity, Is.EqualTo(ghostRole));
-        Assert.That(newMind.VisitingEntity, Is.Null);
+        Assert.Null(newMind.VisitingEntity);
         Assert.That(entMan.Deleted(otherGhost));
 
         await pair.CleanReturnAsync();

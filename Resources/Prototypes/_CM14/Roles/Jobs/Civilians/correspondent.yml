@@ -6,8 +6,9 @@
   playTimeTracker: JobCorrespondent
   startingGear: CorrespondentGear
   icon: "JobIconCorrespondent"
-  joinNotifyCrew: false
-  supervisors: job-supervisors-cm14-co
+  requireAdminNotify: false
+  joinNotifyCrew: true
+  supervisors: job-supervisors-command
   canBeAntag: true
   accessGroups:
   - CMCorrespondent

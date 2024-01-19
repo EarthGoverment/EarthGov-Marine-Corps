@@ -13,7 +13,6 @@ using Content.Shared.StationRecords;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
 using Robust.Shared.Player;
-using Robust.Shared.Utility;
 
 namespace Content.Server.CrewManifest;
 
@@ -38,11 +37,10 @@ public sealed class CrewManifestSystem : EntitySystem
         SubscribeLocalEvent<AfterGeneralRecordCreatedEvent>(AfterGeneralRecordCreated);
         SubscribeLocalEvent<RecordModifiedEvent>(OnRecordModified);
         SubscribeLocalEvent<RecordRemovedEvent>(OnRecordRemoved);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
-        SubscribeNetworkEvent<RequestCrewManifestMessage>(OnRequestCrewManifest);
-
         SubscribeLocalEvent<CrewManifestViewerComponent, BoundUIClosedEvent>(OnBoundUiClose);
         SubscribeLocalEvent<CrewManifestViewerComponent, CrewManifestOpenUiMessage>(OpenEuiFromBui);
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+        SubscribeNetworkEvent<RequestCrewManifestMessage>(OnRequestCrewManifest);
     }
 
     private void OnRoundRestart(RoundRestartCleanupEvent ev)
@@ -93,9 +91,6 @@ public sealed class CrewManifestSystem : EntitySystem
 
     private void OnBoundUiClose(EntityUid uid, CrewManifestViewerComponent component, BoundUIClosedEvent ev)
     {
-        if (!Equals(ev.UiKey, component.OwnerKey))
-            return;
-
         var owningStation = _stationSystem.GetOwningStation(uid);
         if (owningStation == null || ev.Session is not { } session)
         {
@@ -129,14 +124,6 @@ public sealed class CrewManifestSystem : EntitySystem
 
     private void OpenEuiFromBui(EntityUid uid, CrewManifestViewerComponent component, CrewManifestOpenUiMessage msg)
     {
-        if (!msg.UiKey.Equals(component.OwnerKey))
-        {
-            Log.Error(
-                "{User} tried to open crew manifest from wrong UI: {Key}. Correct owned is {ExpectedKey}",
-                msg.Session, msg.UiKey, component.OwnerKey);
-            return;
-        }
-
         var owningStation = _stationSystem.GetOwningStation(uid);
         if (owningStation == null || msg.Session is not { } session)
         {

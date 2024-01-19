@@ -6,8 +6,6 @@ using Robust.Client.UserInterface.Controls;
 
 namespace Content.Client.Administration;
 
-// mfw they ported input() from BYOND
-
 /// <summary>
 /// This handles the client portion of quick dialogs.
 /// </summary>
@@ -34,48 +32,39 @@ public sealed class QuickDialogSystem : EntitySystem
 
         var promptsDict = new Dictionary<string, LineEdit>();
 
-        for (var index = 0; index < ev.Prompts.Count; index++)
+        foreach (var entry in ev.Prompts)
         {
-            var entry = ev.Prompts[index];
             var entryBox = new BoxContainer()
             {
                 Orientation = BoxContainer.LayoutOrientation.Horizontal
             };
 
             entryBox.AddChild(new Label { Text = entry.Prompt, HorizontalExpand = true, SizeFlagsStretchRatio = 0.5f });
-            var edit = new LineEdit() { HorizontalExpand = true };
+            var edit = new LineEdit() { HorizontalExpand = true};
             entryBox.AddChild(edit);
             switch (entry.Type)
             {
                 case QuickDialogEntryType.Integer:
                     edit.IsValid += VerifyInt;
-                    edit.PlaceHolder = Loc.GetString("quick-dialog-ui-integer");
+                    edit.PlaceHolder = "Integer..";
                     break;
                 case QuickDialogEntryType.Float:
                     edit.IsValid += VerifyFloat;
-                    edit.PlaceHolder = Loc.GetString("quick-dialog-ui-float");
+                    edit.PlaceHolder = "Float..";
                     break;
                 case QuickDialogEntryType.ShortText:
                     edit.IsValid += VerifyShortText;
-                    edit.PlaceHolder = Loc.GetString("quick-dialog-ui-short-text");
+                    edit.PlaceHolder = "Short text..";
                     break;
                 case QuickDialogEntryType.LongText:
                     edit.IsValid += VerifyLongText;
-                    edit.PlaceHolder = Loc.GetString("quick-dialog-ui-long-text");
+                    edit.PlaceHolder = "Long text..";
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-
             promptsDict.Add(entry.FieldId, edit);
             entryContainer.AddChild(entryBox);
-
-            if (index == ev.Prompts.Count - 1)
-            {
-                // Last text box gets enter confirmation.
-                // Only the last so you don't accidentally confirm early.
-                edit.OnTextEntered += _ => Confirm();
-            }
         }
 
         var buttonsBox = new BoxContainer()
@@ -90,10 +79,17 @@ public sealed class QuickDialogSystem : EntitySystem
         {
             var okButton = new Button()
             {
-                Text = Loc.GetString("quick-dialog-ui-ok"),
+                Text = "Ok",
             };
 
-            okButton.OnPressed += _ => Confirm();
+            okButton.OnPressed += _ =>
+            {
+                RaiseNetworkEvent(new QuickDialogResponseEvent(ev.DialogId,
+                    promptsDict.Select(x => (x.Key, x.Value.Text)).ToDictionary(x => x.Key, x => x.Text),
+                    QuickDialogButtonFlag.OkButton));
+                alreadyReplied = true;
+                window.Close();
+            };
 
             buttonsBox.AddChild(okButton);
         }
@@ -102,7 +98,7 @@ public sealed class QuickDialogSystem : EntitySystem
         {
             var cancelButton = new Button()
             {
-                Text = Loc.GetString("quick-dialog-ui-cancel"),
+                Text = "Cancel",
             };
 
             cancelButton.OnPressed += _ =>
@@ -134,17 +130,6 @@ public sealed class QuickDialogSystem : EntitySystem
         window.MinWidth *= 2; // Just double it.
 
         window.OpenCentered();
-
-        return;
-
-        void Confirm()
-        {
-            RaiseNetworkEvent(new QuickDialogResponseEvent(ev.DialogId,
-                promptsDict.Select(x => (x.Key, x.Value.Text)).ToDictionary(x => x.Key, x => x.Text),
-                QuickDialogButtonFlag.OkButton));
-            alreadyReplied = true;
-            window.Close();
-        }
     }
 
     private bool VerifyInt(string input)

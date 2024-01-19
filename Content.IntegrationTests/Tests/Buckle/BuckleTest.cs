@@ -111,7 +111,7 @@ namespace Content.IntegrationTests.Tests.Buckle
                     // Side effects of buckling for the strap
                     Assert.That(strap.BuckledEntities, Does.Contain(human));
                     Assert.That(strap.OccupiedSize, Is.EqualTo(buckle.Size));
-                    Assert.That(strap.OccupiedSize, Is.Positive);
+                    Assert.Positive(strap.OccupiedSize);
                 });
 
 #pragma warning disable NUnit2045 // Interdependent asserts.

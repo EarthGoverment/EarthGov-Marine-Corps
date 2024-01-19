@@ -19,5 +19,7 @@ public sealed class DebugMonitorSystem : EntitySystem
     {
         if (!_admin.IsActive() && _cfg.GetCVar(CCVars.DebugCoordinatesAdminOnly))
             _userInterface.DebugMonitors.SetMonitor(DebugMonitor.Coords, false);
+        else
+            _userInterface.DebugMonitors.SetMonitor(DebugMonitor.Coords, true);
     }
 }

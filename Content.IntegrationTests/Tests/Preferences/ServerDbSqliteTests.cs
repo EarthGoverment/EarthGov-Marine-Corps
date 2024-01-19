@@ -83,7 +83,7 @@ namespace Content.IntegrationTests.Tests.Preferences
             var pair = await PoolManager.GetServerClient();
             var db = GetDb(pair.Server);
             // Database should be empty so a new GUID should do it.
-            Assert.That(await db.GetPlayerPreferencesAsync(NewUserId()), Is.Null);
+            Assert.Null(await db.GetPlayerPreferencesAsync(NewUserId()));
 
             await pair.CleanReturnAsync();
         }

@@ -34,10 +34,7 @@ public sealed partial class StorageSystem : SharedStorageSystem
     {
         base.Initialize();
         SubscribeLocalEvent<StorageComponent, GetVerbsEvent<ActivationVerb>>(AddUiVerb);
-        Subs.BuiEvents<StorageComponent>(StorageComponent.StorageUiKey.Key, subs =>
-        {
-            subs.Event<BoundUIClosedEvent>(OnBoundUIClosed);
-        });
+        SubscribeLocalEvent<StorageComponent, BoundUIClosedEvent>(OnBoundUIClosed);
         SubscribeLocalEvent<StorageComponent, BeforeExplodeEvent>(OnExploded);
 
         SubscribeLocalEvent<StorageFillComponent, MapInitEvent>(OnStorageFillMapInit);

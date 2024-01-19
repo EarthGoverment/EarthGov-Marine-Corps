@@ -6,8 +6,9 @@
   playTimeTracker: JobCMCargoTech
   startingGear: CMCargoTechGear
   icon: "JobIconCMCargoTech"
-  joinNotifyCrew: false
-  supervisors: job-supervisors-cm14-qm
+  requireAdminNotify: false
+  joinNotifyCrew: true
+  supervisors: job-supervisors-cm-quartermaster
   canBeAntag: true
   accessGroups:
   - CMCargoTech

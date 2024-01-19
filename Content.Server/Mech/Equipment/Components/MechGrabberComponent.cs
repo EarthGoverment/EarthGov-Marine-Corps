@@ -1,6 +1,5 @@
 ﻿using System.Numerics;
 using System.Threading;
-using Content.Shared.DoAfter;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 
@@ -48,7 +47,4 @@ public sealed partial class MechGrabberComponent : Component
 
     [ViewVariables(VVAccess.ReadWrite)]
     public Container ItemContainer = default!;
-
-    [DataField, ViewVariables(VVAccess.ReadOnly)]
-    public DoAfterId? DoAfter;
 }

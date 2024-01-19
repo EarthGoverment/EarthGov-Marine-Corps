@@ -7,7 +7,6 @@ using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using System.Numerics;
-using Content.Shared.StatusIcon.Components;
 using static Robust.Shared.Maths.Color;
 
 namespace Content.Client.Overlays;
@@ -66,8 +65,7 @@ public sealed class EntityHealthBarOverlay : Overlay
                 continue;
             }
 
-            // we use the status icon component bounds if specified otherwise use sprite
-            var bounds = _entManager.GetComponentOrNull<StatusIconComponent>(uid)?.Bounds ?? spriteComponent.Bounds;
+            var bounds = spriteComponent.Bounds;
             var worldPos = _transform.GetWorldPosition(xform, xformQuery);
 
             if (!bounds.Translated(worldPos).Intersects(args.WorldAABB))
@@ -83,8 +81,8 @@ public sealed class EntityHealthBarOverlay : Overlay
 
             handle.SetTransform(matty);
 
-            var yOffset = bounds.Height * EyeManager.PixelsPerMeter / 2 - 3f;
-            var widthOfMob = bounds.Width * EyeManager.PixelsPerMeter;
+            var yOffset = spriteComponent.Bounds.Height * EyeManager.PixelsPerMeter / 2 - 3f;
+            var widthOfMob = spriteComponent.Bounds.Width * EyeManager.PixelsPerMeter;
 
             var position = new Vector2(-widthOfMob / EyeManager.PixelsPerMeter / 2, yOffset / EyeManager.PixelsPerMeter);
 

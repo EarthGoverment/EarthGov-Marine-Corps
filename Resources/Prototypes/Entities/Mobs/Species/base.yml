@@ -36,7 +36,6 @@
     - map: [ "shoes" ]
     - map: [ "ears" ]
     - map: [ "outerClothing" ]
-    - map: ["enum.WebbingVisualLayers.Base"]
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "neck" ]
@@ -81,8 +80,6 @@
         clownedon: # Not 'creampied' bc I can already see Skyrat complaining about conflicts.
           True: {visible: true}
           False: {visible: false}
-  - type: StatusIcon
-    bounds: -0.5,-0.5,0.5,0.5
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
@@ -350,7 +347,6 @@
     - map: [ "shoes" ]
     - map: [ "ears" ]
     - map: [ "outerClothing" ]
-    - map: ["enum.WebbingVisualLayers.Base"]
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]

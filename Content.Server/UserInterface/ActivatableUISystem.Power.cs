@@ -31,24 +31,12 @@ public sealed partial class ActivatableUISystem
 
     private void OnBatteryOpened(EntityUid uid, ActivatableUIRequiresPowerCellComponent component, BoundUIOpenedEvent args)
     {
-        var activatable = Comp<ActivatableUIComponent>(uid);
-
-        if (!args.UiKey.Equals(activatable.Key))
-            return;
-
         _cell.SetPowerCellDrawEnabled(uid, true);
     }
 
     private void OnBatteryClosed(EntityUid uid, ActivatableUIRequiresPowerCellComponent component, BoundUIClosedEvent args)
     {
-        var activatable = Comp<ActivatableUIComponent>(uid);
-
-        if (!args.UiKey.Equals(activatable.Key))
-            return;
-
-        // Stop drawing power if this was the last person with the UI open.
-        if (!_uiSystem.IsUiOpen(uid, activatable.Key))
-            _cell.SetPowerCellDrawEnabled(uid, false);
+        _cell.SetPowerCellDrawEnabled(uid, false);
     }
 
     /// <summary>
