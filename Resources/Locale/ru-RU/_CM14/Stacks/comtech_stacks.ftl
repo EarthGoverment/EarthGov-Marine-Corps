@@ -1,0 +1,1 @@
+stack-BarbedWire = колючая проволока
