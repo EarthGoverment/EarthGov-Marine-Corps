@@ -1,4 +1,4 @@
-ent-DoorXenoResin = resin door
-    .desc = { ent-BaseStructure.desc }
-ent-DoorXenoResinThick = thick resin door
-    .desc = { ent-DoorXenoResin.desc }
+ent-DoorXenoResin = дверь из смолы
+    .desc = дверь из смолы ксеноморфов
+ent-DoorXenoResinThick = толстая дверь из смолы
+    .desc = толстая дверь из смолы ксеноморфов

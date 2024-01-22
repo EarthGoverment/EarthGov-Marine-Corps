@@ -1,8 +1,8 @@
-ent-XenoWeeds = weeds
-    .desc = { "" }
-ent-XenoWeedsSource = resin node
-    .desc = { ent-XenoWeeds.desc }
-ent-XenoHiveWeeds = hive weeds
-    .desc = { ent-XenoWeeds.desc }
-ent-XenoHiveWeedsSource = hive resin node
-    .desc = { ent-XenoHiveWeeds.desc }
+ent-XenoWeeds = смолистая субстанция
+    .desc = смолистая субстанция, на ощуп как сопли.
+ent-XenoWeedsSource = узел из смолы
+    .desc = смолистая субстанция, на ощуп как сопли.
+ent-XenoHiveWeeds = ульевые сорняки
+    .desc = смолистая субстанция, на ощуп как сопли.
+ent-XenoHiveWeedsSource = узел из смолы улья
+    .desc = смолистая субстанция, на ощуп как сопли.

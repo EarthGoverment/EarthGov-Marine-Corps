@@ -1,16 +1,18 @@
-ent-CMFilingCabinetBase = { "" }
-    .desc = A large cabinet with drawers.
-    .suffix = Empty
-ent-CMFilingCabinet = filing cabinet
+ent-CMFilingCabinetBase = картотечный шкаф
+    .desc = Большой шкаф с выдвижными ящиками.
+    .suffix = Пустой
 
-  .desc = { ent-['CMFilingCabinetBase', 'filingCabinet'].desc }
-ent-CMFilingCabinetTall = tall filing cabinet
+ent-CMFilingCabinet = картотечный шкаф
+  .desc = Большой шкаф с выдвижными ящиками.
 
-  .desc = { ent-['CMFilingCabinetBase', 'filingCabinetTall'].desc }
-ent-CMFilingCabinetTallWood = tall wooden filing cabinet
-    .desc = { ent-CMFilingCabinetTall.desc }
-ent-CMFilingCabinetChest = chest drawer
+ent-CMFilingCabinetTall = высокий картотечный шкаф
+  .desc = Большой шкаф с выдвижными ящиками.
 
-  .desc = { ent-['CMFilingCabinetBase', 'filingCabinetDrawer'].desc }
-ent-CMFilingCabinetChestWood = wooden chest drawer
-    .desc = { ent-CMFilingCabinetChest.desc }
+ent-CMFilingCabinetTallWood = высокий деревянный картотечный шкаф
+    .desc = Большой шкаф с выдвижными ящиками.
+
+ent-CMFilingCabinetChest = ящик комода
+  .desc = Большой шкаф с выдвижными ящиками.
+
+ent-CMFilingCabinetChestWood = деревянный ящик комода
+    .desc = Большой шкаф с выдвижными ящиками.

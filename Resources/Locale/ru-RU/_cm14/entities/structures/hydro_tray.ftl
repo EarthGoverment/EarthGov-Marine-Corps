@@ -1,2 +1,1 @@
-ent-CMHydroponicsTray = hydroponics tray
-    .desc = { ent-hydroponicsTray.desc }
+ent-CMHydroponicsTray = поддон для гидропоники

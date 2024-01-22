@@ -1,2 +1,2 @@
-ent-CMRack = rack
-    .desc = A bunch of metal shelves stacked on top of eachother. Excellent for storage purposes, less so as cover.
+ent-CMRack = стеллаж
+    .desc = Несколько металлических полок, поставленных друг на друга. Отлично подходит для хранения, в меньшей степени в качестве крышки.

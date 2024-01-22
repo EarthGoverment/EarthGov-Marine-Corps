@@ -1,6 +1,4 @@
-ent-CMTestDummy = test dummy
+ent-CMTestDummy = тестовый манекен
     .suffix = CM14
-    .desc = { ent-MobHuman.desc }
-ent-SpawnCMTestDummy = CM Test Dummy Spawner
+ent-SpawnCMTestDummy = тестовый манекен спавнер
     .suffix = DEBUG
-    .desc = { ent-MarkerBase.desc }

@@ -1,4 +1,4 @@
-ent-CMLightFixture = light fixture
-    .desc = A lighting fixture that is fitted with a bright fluorescent light tube. Looking at it for too long makes your eyes go watery.
-ent-CMLightBulb = light fixture
-    .desc = A small lighting fixture that is fitted with a bright fluorescent light bulb. Looking at it for too long makes your eyes go watery.
+ent-CMLightFixture = светильник
+    .desc = Осветительный прибор, оснащенный яркой люминесцентной лампой. Если смотреть на него слишком долго, у вас слезятся глаза.
+ent-CMLightBulb = светильник
+    .desc = Небольшой осветительный прибор, оснащенный яркой люминесцентной лампочкой. Если смотреть на него слишком долго, у вас слезятся глаза.

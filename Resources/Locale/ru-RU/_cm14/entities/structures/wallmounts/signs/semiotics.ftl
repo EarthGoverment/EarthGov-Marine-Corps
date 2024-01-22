@@ -1,5 +1,5 @@
-ent-CMSemioticBase = { ent-BaseSign }
-    .desc = { ent-BaseSign.desc }
+ent-CMSemioticBase = знак
+    .desc = знак
 ent-CMSemioticAirlock = airlock semiotic
     .desc = Semiotic Standard denoting the nearby presence of an airlock.
 ent-CMSemioticAmmunition = ammunition storage semiotic

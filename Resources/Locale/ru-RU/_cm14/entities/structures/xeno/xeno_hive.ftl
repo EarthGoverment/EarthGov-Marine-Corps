@@ -1,4 +1,4 @@
-ent-HiveCoreXeno = hive core
-    .desc = { "" }
-ent-HiveCoreXenoConstructionNode = hive core
-    .desc = A strange wriggling lump. Looks like a marker for something.
+ent-HiveCoreXeno = ядро улья
+    .desc = Странный извивающийся комок.
+ent-HiveCoreXenoConstructionNode = ядро улья
+    .desc = Странный извивающийся комок. Похоже на какой-то маркер.

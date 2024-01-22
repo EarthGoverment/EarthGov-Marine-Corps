@@ -1,6 +1,6 @@
-ent-CMPlatformBase = platform
-    .desc = A square metal surface resting on four legs.
-ent-CMPlatform = platform
-    .desc = A square metal surface resting on four legs.
-ent-CMPlatformCorner = platform
-    .desc = A square metal surface resting on four legs.
+ent-CMPlatformBase = платформа
+    .desc = Квадратная металлическая поверхность, опирающаяся на четыре ножки.
+ent-CMPlatform = платформа
+    .desc = Квадратная металлическая поверхность, опирающаяся на четыре ножки.
+ent-CMPlatformCorner = платформа
+    .desc = Квадратная металлическая поверхность, опирающаяся на четыре ножки.

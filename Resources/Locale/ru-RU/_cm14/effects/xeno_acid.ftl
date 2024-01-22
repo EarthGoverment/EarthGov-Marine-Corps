@@ -1,2 +1,1 @@
-ent-XenoAcid = corrosive acid
-    .desc = { "" }
+ent-XenoAcid = Едкая кислота

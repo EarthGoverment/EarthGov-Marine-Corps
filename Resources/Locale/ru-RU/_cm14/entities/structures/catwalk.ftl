@@ -1,2 +1,2 @@
-ent-CMCatwalk = catwalk
-    .desc = A catwalk for easier EVA maneuvering and cable placement.
+ent-CMCatwalk = подиум
+    .desc = Подиум для более легкого маневрирования EVA и размещения троса.

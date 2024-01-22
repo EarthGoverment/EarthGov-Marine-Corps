@@ -1,6 +1,6 @@
-ent-CMFogWall = dense fog
-    .desc = It looks way too dangerous to traverse. Best wait until it has cleared up.
-    .suffix = 25 minutes
-ent-CMFogWallShort = { ent-CMFogWall }
-    .suffix = 15 minutes
-    .desc = { ent-CMFogWall.desc }
+ent-CMFogWall = густой туман
+    .desc = Это выглядит слишком опасным для прохождения. Лучше подождать, пока все прояснится.
+    .suffix = 25 минут
+ent-CMFogWallShort = густой туман
+    .suffix = 15 минут
+    .desc = Это выглядит слишком опасным для прохождения. Лучше подождать, пока все прояснится.

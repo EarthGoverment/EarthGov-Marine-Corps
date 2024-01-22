@@ -1,2 +1,2 @@
-ent-CMFence = fence
-    .desc = A large metal mesh strewn between two poles. Intended as a cheap way to separate areas, while allowing one to see through it.
+ent-CMFence = забор
+    .desc = Большая металлическая сетка, натянутая между двумя столбами. Задумана как дешевый способ разделения зон, позволяющий видеть сквозь нее.

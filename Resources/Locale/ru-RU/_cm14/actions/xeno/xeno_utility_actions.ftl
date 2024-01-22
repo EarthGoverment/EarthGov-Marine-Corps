@@ -1,2 +1,1 @@
-ent-ActionXenoTransferPlasma = Transfer plasma
-    .desc = { ent-ActionXenoBase.desc }
+ent-ActionXenoTransferPlasma = Перенос плазмы

@@ -1,2 +1,1 @@
-ent-ActionXenoEvolve60 = Evolve
-    .desc = { ent-ActionXenoBase.desc }
+ent-ActionXenoEvolve60 = Эволюционировать
