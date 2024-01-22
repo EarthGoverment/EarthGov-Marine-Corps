@@ -1,1 +1,0 @@
-ent-CMBaseDoor = дверь
