@@ -1,7 +1,5 @@
 ent-CrateFunPlushie = { ent-CrateGenericSteel }
     .desc = { ent-CrateGenericSteel.desc }
-ent-CrateFunLizardPlushieBulk = { ent-CrateGenericSteel }
-    .desc = { ent-CrateGenericSteel.desc }
 ent-CrateFunInstrumentsVariety = { ent-CrateGenericSteel }
     .desc = { ent-CrateGenericSteel.desc }
 ent-CrateFunInstrumentsBrass = { ent-CrateGenericSteel }
