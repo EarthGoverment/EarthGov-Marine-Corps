@@ -1,0 +1,1 @@
+ent-ActionXenoTransferPlasma = Перенос плазмы
