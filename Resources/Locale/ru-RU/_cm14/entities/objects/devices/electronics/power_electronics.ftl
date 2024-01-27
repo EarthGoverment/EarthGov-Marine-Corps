@@ -1,2 +1,2 @@
-ent-CMAPCElectronics = power control module
-    .desc = Circuit used in APC construction.
+ent-CMAPCElectronics = модуль управления питанием
+    .desc = Схема, используемая в конструкции APC.

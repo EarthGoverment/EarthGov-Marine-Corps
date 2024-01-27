@@ -1,8 +1,8 @@
-ent-StaffOfficerIDCard = staff officer ID card
+ent-StaffOfficerIDCard = ID карта штабного офицера
     .desc = { ent-CMIDCardSilver.desc }
-ent-SeniorEnlistedAdvisorIDCard = senior enlisted advisor ID card
+ent-SeniorEnlistedAdvisorIDCard = ID карта старшего рядового советника
     .desc = { ent-CMIDCardSilver.desc }
-ent-CommandingOfficerIDCard = commanding officer ID card
+ent-CommandingOfficerIDCard = ID карта командира
     .desc = { ent-CMIDCardGold.desc }
-ent-ExecutiveOfficerIDCard = executive officer ID card
+ent-ExecutiveOfficerIDCard = ID карта исполнительного директора
     .desc = { ent-CMIDCardSilver.desc }

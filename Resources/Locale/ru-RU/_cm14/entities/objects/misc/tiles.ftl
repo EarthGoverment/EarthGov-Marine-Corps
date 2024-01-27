@@ -1,6 +1,6 @@
 ent-CMTileItemBase = { ent-FloorTileItemBase }
     .desc = { ent-FloorTileItemBase.desc }
-ent-CMTileItemSteel = steel floor
+ent-CMTileItemSteel = стальной пол
     .desc = { ent-CMTileItemBase.desc }
-ent-CMTileItemWood = wood floor
+ent-CMTileItemWood = деревянный пол
     .desc = { ent-CMTileItemBase.desc }

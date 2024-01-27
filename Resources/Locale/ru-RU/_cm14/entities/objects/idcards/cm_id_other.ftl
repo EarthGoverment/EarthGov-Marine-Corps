@@ -1,4 +1,4 @@
-ent-CorrespondentIDCard = correspondent ID card
+ent-CorrespondentIDCard = ID карта корреспондента
     .desc = { ent-CMIDCardBase.desc }
-ent-ColonistIDCard = colonist ID card
+ent-ColonistIDCard = ID карта колониста
     .desc = { ent-CMIDCardLanyard.desc }

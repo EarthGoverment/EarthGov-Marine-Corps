@@ -1,4 +1,4 @@
-ent-CMBodyBag = body bag
-    .desc = A folded bag designed for the storage and transportation of cadavers.
-ent-CMStasisBag = stasis bag
-    .desc = A folded, reusable bag designed to prevent additional damage to an occupant.
+ent-CMBodyBag = мешок для тела
+    .desc = Сложенный мешок, предназначенный для хранения и транспортировки трупов.
+ent-CMStasisBag = стазисный мешок
+    .desc = Сложенный многоразовый мешок, предназначенный для предотвращения дополнительного повреждения находящегося в нем человека.

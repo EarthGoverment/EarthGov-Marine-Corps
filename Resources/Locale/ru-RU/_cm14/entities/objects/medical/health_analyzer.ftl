@@ -1,3 +1,3 @@
-ent-CMHealthAnalyzer = HF2 health analyzer
-    .desc = A hand-held body scanner capable of distinguishing vital signs of the subject.
+ent-CMHealthAnalyzer = Анализатор здоровья HF2
+    .desc = Ручной сканер тела, способный распознавать жизненно важные показатели субъекта.
     .suffix = CM14

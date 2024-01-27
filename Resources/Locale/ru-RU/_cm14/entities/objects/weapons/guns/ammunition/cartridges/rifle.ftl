@@ -1,2 +1,2 @@
-ent-CartridgeRifle10x24mm = cartridge (10x24mm)
+ent-CartridgeRifle10x24mm = картридж (10x24 мм)
     .desc = { ent-BaseCartridgeRifle.desc }

@@ -1,2 +1,2 @@
-ent-CMLamp = desk lamp
-    .desc = A desk lamp with an adjustable mount.
+ent-CMLamp = настольная лампа
+    .desc = Настольная лампа с регулируемым креплением.

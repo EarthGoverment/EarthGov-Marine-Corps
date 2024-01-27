@@ -1,4 +1,4 @@
 ent-CMBarFoodBase = { ent-CMFoodBase }
     .desc = { ent-CMFoodBase.desc }
-ent-CMUSCMProteinBar = USCM protein bar
-    .desc = The most fake-looking protein bar you have ever laid eyes on, covered in a substitution chocolate. The powder used to make these is a substitute of a substitute of whey substitute.
+ent-CMUSCMProteinBar = Протеиновый батончик USCM
+.desc = Самый похожий на подделку протеиновый батончик, который вы когда-либо видели, покрытый заменителем шоколада. Порошок, используемый для их приготовления, является заменителем заменителя молочной сыворотки.

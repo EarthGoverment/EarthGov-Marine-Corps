@@ -1,2 +1,2 @@
-ent-CMWelder = welding tool
-    .desc = Melts anything as long as it's fueled, don't forget your eye protection!
+ent-CMWelder = сварочный инструмент
+    .desc = Плавит все, что угодно, пока оно заправлено топливом, не забывайте о защите глаз!

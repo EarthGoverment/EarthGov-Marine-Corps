@@ -1,2 +1,2 @@
-ent-CMPen = pen
-    .desc = It's a normal black ink pen.
+ent-CMPen = ручка
+    .desc = Это обычная ручка с черными чернилами.

@@ -1,6 +1,6 @@
-ent-WeaponRifleM41A = M41A pulse rifle
-    .desc = This is the standard issue pulse rifle used by the Colonial Marines. A reliable, robust, and overall effective standard issue weapon, the M41A must be held in two hands to accurately fire.
-ent-WeaponRifleM41AE2 = M41AE2 heavy pulse rifle
-    .desc = A large squad support weapon capable of laying down sustained suppressing fire from a mounted position. While unstable and less accurate, it can be lugged and shot with two hands.
-ent-WeaponRifleM4RA = M4RA battle rifle
-    .desc = The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.
+ent-WeaponRifleM41A = Импульсная винтовка M41A
+    .desc = Это импульсная винтовка стандартного выпуска, используемая колониальной морской пехотой. Будучи надежным, прочным и в целом эффективным оружием стандартного выпуска, M41A необходимо держать двумя руками, чтобы вести точный огонь.
+ent-WeaponRifleM41AE2 = тяжелая импульсная винтовка M41AE2
+    .desc = Крупнокалиберное оружие поддержки отделения, способное вести непрерывный огонь на подавление с места установки. Хотя оно нестабильно и менее точно, его можно таскать и стрелять двумя руками.
+ent-WeaponRifleM4RA = боевая винтовка M4RA
+    .desc = Боевая винтовка M4RA - это специальная стрелковая винтовка, состоящая на вооружении USCM. Боевая винтовка M4RA в конфигурации буллпап идеально подходит для разведки и групп огневой поддержки.

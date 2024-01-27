@@ -1,8 +1,8 @@
-ent-CMMagazineSniperM42A = M42A marksman magazine (10x28mm caseless)
-    .desc = A magazine of sniper rifle ammo. An aimed shot with it will deal significant damage.
-ent-CMMagazineSniperM42AIncendiary = M42A incendiary magazine (10x28mm)
-    .desc = A magazine of sniper rifle ammo. An aimed shot with it will temporarily blind the targe and kindle the blaze further.
-ent-CMMagazineSniperM42AFlak = M42A flak magazine (10x28mm)
-    .desc = A magazine of sniper rifle ammo. An aimed shot with it will temporarily slow the target and minimize the backlash.
-ent-CMMagazineSniperM42AAntiMateriel = XM43E1 marksman magazine (10x99mm)
-    .desc = A magazine of caseless 10x99mm anti-materiel rounds.
+ent-CMMagazineSniperM42A = магазин для снайпера M42A (10x28mm без гильзы)
+ .desc = Магазин с патронами для снайперской винтовки. Прицельный выстрел из него нанесет значительный урон.
+ent-CMMagazineSniperM42AIncendiary = Магазин для зажигательных боеприпасов M42A (10x28mm)
+ .desc = Магазин для боеприпасов к снайперской винтовке. Прицельный выстрел из него временно ослепит цель и еще больше разожжет пламя.
+ent-CMMagazineSniperM42AFlak = зенитный магазин M42A (10x28mm)
+ .desc = Магазин с патронами для снайперской винтовки. Прицельный выстрел из него временно замедлит цель и сведет к минимуму отдачу.
+ent-CMMagazineSniperM42AAntiMateriel = магазин для стрелков XM43E1 (10x99mm)
+ .desc = Магазин безгильзовых противотанковых патронов 10x99mm.

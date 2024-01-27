@@ -1,6 +1,6 @@
-ent-CMQuartermasterIDCard = quartermaster ID card
+ent-CMQuartermasterIDCard = ID карта квартирмейстера
     .desc = { ent-CMIDCardSilver.desc }
-ent-CMCargoTechIDCard = cargo tech's ID card
+ent-CMCargoTechIDCard = ID карта техника-грузчика
     .desc = { ent-CMIDCardBase.desc }
-ent-MessTechIDCard = mess tech's ID card
+ent-MessTechIDCard = ID карта техника беспорядка
     .desc = { ent-CMIDCardBase.desc }

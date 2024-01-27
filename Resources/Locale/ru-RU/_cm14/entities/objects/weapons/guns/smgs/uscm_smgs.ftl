@@ -1,2 +1,2 @@
-ent-WeaponSMGM39 = M39 submachine gun
-    .desc = The Armat Battlefield Systems M-39 submachinegun. Occasionally carried by light-infantry, scouts, engineers and medics.
+ent-WeaponSMGM39 = пистолет-пулемет M39
+    .desc = Пистолет-пулемет Armat Battlefield Systems M-39. Иногда используется легкой пехотой, разведчиками, инженерами и медиками.

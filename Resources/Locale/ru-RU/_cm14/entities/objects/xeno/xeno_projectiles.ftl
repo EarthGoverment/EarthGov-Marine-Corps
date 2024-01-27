@@ -1,8 +1,8 @@
-ent-XenoBaseProjectile = projectile
+ent-XenoBaseProjectile = метательный
     .desc = { "" }
-ent-XenoSlowingSpitProjectile = slowing spit
+ent-XenoSlowingSpitProjectile = замедляющийся плевок
     .desc = { ent-XenoBaseProjectile.desc }
-ent-XenoScatteredSpitProjectile = scattered spit
+ent-XenoScatteredSpitProjectile = рассеянный плевок
     .desc = { ent-XenoBaseProjectile.desc }
-ent-XenoBoneChipsProjectile = bone chips
+ent-XenoBoneChipsProjectile = костяные крошки
     .desc = { ent-XenoBaseProjectile.desc }
