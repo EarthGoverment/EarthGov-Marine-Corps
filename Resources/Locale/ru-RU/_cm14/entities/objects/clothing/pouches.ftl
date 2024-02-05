@@ -1,4 +1,4 @@
-ent-CMPouch = абстрактный мешочек
+ent-CMPouch = сумка
     .desc = Физическое проявление концепции мешочка. Вау.
 ent-CMPouchClosed = { ent-CMPouch }
     .desc = { ent-CMPouch.desc }

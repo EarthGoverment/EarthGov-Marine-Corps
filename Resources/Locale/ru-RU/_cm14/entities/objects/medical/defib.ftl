@@ -1,12 +1,12 @@
 ent-CMBaseDefibrillator = дефибриллятор
-    .desc = CLEAR! Zzzzat!
+    .desc = ЧИСТО! РАЗРЯД!
 ent-CMDefibrillator = дефибриллятор
 
   .suffix = CM14
-  .desc = CLEAR! Zzzzat!
+  .desc = ЧИСТО! РАЗРЯД!
 ent-CMDefibrillatorEmpty = дефибриллятор
     .suffix = CM14, пустой
-    .desc = CLEAR! Zzzzat!
+    .desc = ЧИСТО! РАЗРЯД!
 ent-CMDefibrillatorInfinite = дефибриллятор
     .suffix = CM14, бесконечный
-    .desc = CLEAR! Zzzzat!
+    .desc = ЧИСТО! РАЗРЯД!

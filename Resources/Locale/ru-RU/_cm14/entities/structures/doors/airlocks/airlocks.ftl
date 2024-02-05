@@ -53,13 +53,13 @@ ent-CMAirlockResearchLocked = шлюз
 # Civilian
 
 ent-CMAirlockPressLocked = шлюз
-  .suffix = Press, Запертый
+  .suffix = нажмите, Запертый
 
 ent-CMAirlockGlassPressLocked = стеклянный шлюз
-  .suffix = Press, Запертый, Стеклянный
+  .suffix = нажмите, Запертый, Стеклянный
 
 ent-CMAirlockMaintPressLocked = шлюз
-  .suffix = Press, Запертый, Основной
+  .suffix = нажмите, Запертый, Основной
 
 ent-CMAirlockCommandLocked = шлюз
   .suffix = Командный, Запертый
