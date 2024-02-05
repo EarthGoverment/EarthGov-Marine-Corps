@@ -1,4 +1,4 @@
-ent-CMShellShotgunBase = Горсть патронов для дробовика
+ent-CMShellShotgunBase = горсть патронов для дробовика
     .desc = Горсть патронов для перезарядки на ходу.
 ent-CMShellShotgunBuckshot = горсть картечи
     .desc = { ent-CMShellShotgunBase.desc }
