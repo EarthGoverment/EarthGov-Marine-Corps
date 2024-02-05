@@ -1,4 +1,4 @@
-ent-CMHandsBlack = черные перчатки
+ent-CMHandsBlack = чёрные перчатки
  .desc = Пара черных перчаток.
 ent-CMHandsBrown = коричневые перчатки
  .desc = Пара коричневых перчаток.
