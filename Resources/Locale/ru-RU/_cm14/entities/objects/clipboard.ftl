@@ -1,2 +1,2 @@
-ent-CMClipboard = буфер обмена
+ent-CMClipboard = планшет
     .desc = { ent-BoxFolderClipboard.desc }
