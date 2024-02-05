@@ -88,7 +88,7 @@ ent-CMAirlockCELocked = шлюз
 ent-CMAirlockASOLocked = шлюз
   .suffix = ASO, Запертый
 
-#Alpha
+# Alpha
 
 ent-CMAirlockPrepAlphaCommon = шлюз "Альфа"
   .suffix = Запертый, Общий
