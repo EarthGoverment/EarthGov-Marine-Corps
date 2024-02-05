@@ -20,5 +20,5 @@ ent-CMCoatOfficer = офицерский китель
     .desc = Стандартный офицерский китель.
 ent-CMCoatLong = длинное пальто
     .desc = Пальто стандартного покроя.
-ent-CMCoatCorrespondent = соответствующее пальто
+ent-CMCoatCorrespondent = пальто корреспондента
     .desc = Пальто-корреспондент стандартного образца.
