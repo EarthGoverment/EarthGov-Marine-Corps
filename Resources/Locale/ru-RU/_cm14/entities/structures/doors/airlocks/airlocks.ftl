@@ -238,7 +238,7 @@ ent-CMAirlockPrepCharlie = шлюз "Чарли"
 
 ent-CMAirlockPrepDelta = шлюз "Дельта"
 
-#Assembly
+# Assembly
 
 ent-CMAirlockAssembly = разобранный шлюз
 
