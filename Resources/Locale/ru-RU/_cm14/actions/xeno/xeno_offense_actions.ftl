@@ -1,0 +1,10 @@
+ent-ActionXenoAcid = Коррозионная кислота
+ent-ActionXenoRegurgitate = Срыгивание
+ent-ActionXenoTailStab = Удар хвостом
+ent-ActionXenoLeap = Прыжок
+ent-ActionXenoHeadbutt = Удар головой
+ent-ActionXenoTailSweep = Взмах хвостом
+ent-ActionXenoSlowingSpit = Замедляющий плевок
+ent-ActionXenoScatteredSpit = Рассеянный плевок
+ent-ActionXenoParalyzingSlash = Парализующий плевок
+ent-ActionXenoBoneChips = Костные чипсы

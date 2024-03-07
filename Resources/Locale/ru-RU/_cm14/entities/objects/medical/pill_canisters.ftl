@@ -1,0 +1,17 @@
+ent-CMPillCanister = флакон для таблеток
+    .desc = Это герметичный контейнер для хранения лекарств.
+ent-CMPillCanisterBicaridine = Флакон для таблеток бикаридина
+    .suffix = бикаридин, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterDexalin = Флакон с таблетками дексалина
+    .suffix = Дексалин, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterDylovene = Флакон с таблетками Диловена
+    .suffix = Диловен, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterInaprovaline = Флакон с таблетками Inaprovaline
+    .suffix = Inaprovaline, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterKelotane = флакон с таблетками келотана
+    .suffix = Келотан, 16
+    .desc = { ent-CMPillCanister.desc }

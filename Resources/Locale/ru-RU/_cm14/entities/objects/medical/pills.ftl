@@ -1,0 +1,12 @@
+ent-CMPill = таблетка
+    .desc = таблетка.
+ent-CMPillBicaridine = таблетка бикаридина (15u)
+    .desc = { ent-CMPill.desc }
+ent-CMPillDexalin = таблетка дексалина (15u)
+    .desc = { ent-CMPill.desc }
+ent-CMPillDylovene = таблетка диловена (15u)
+    .desc = { ent-CMPill.desc }
+ent-CMPillInaprovaline = таблетка инапровалина (15u)
+    .desc = { ent-CMPill.desc }
+ent-CMPillKelotane = таблетка келотана (15u)
+    .desc = { ent-CMPill.desc }
